@@ -1,5 +1,6 @@
 defmodule Terminal.Demo do
   use Terminal.App
+  import Terminal.Demo.Calculator
   import Terminal.Demo.Colors
   import Terminal.Demo.Controls
   import Terminal.Demo.Modals
@@ -46,7 +47,8 @@ defmodule Terminal.Demo do
             "Counter",
             "Timers",
             "Effects",
-            "Unsafe"
+            "Unsafe",
+            "Calculator"
           ]
         )
       end
@@ -73,6 +75,7 @@ defmodule Terminal.Demo do
       4 -> markup(tab, &timers/2, origin: origin, size: size)
       5 -> markup(tab, &effects/2, origin: origin, size: size)
       6 -> markup(tab, &unsafe/2, origin: origin, size: size)
+      7 -> markup(tab, &calculator/2, origin: origin, size: size)
     end
   end
 end
